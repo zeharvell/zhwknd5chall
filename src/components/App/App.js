@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
-import FeelingPage from '../pages/FeelingPage/FeelingPage';
-import UnderstandPage from '../pages/UnderstandPage/UnderstandPage';
-import SupportPage from '../pages/SupportPage/SupportPage';
-import CommentPage from '../pages/CommentPage/CommentPage';
+import FeelingPage from '../Pages/FeelingPage/FeelingPage';
+import UnderstandPage from '../Pages/UnderstandPage/UnderstandPage';
+import SupportPage from '../Pages/SupportPage/SupportPage';
+import CommentPage from '../Pages/CommentPage/CommentPage';
 
 class App extends Component {
   render() {
@@ -13,10 +13,10 @@ class App extends Component {
       <div className="App">
         <h1>Feedback Forum</h1>
         <Router>
-          <route exact path="/" component={FeelingPage} />
-          <route exact path="/understand" component={UnderstandPage} />
-          <route exact path="/support" component={SupportPage} />
-          <route exact path="/comment" component={CommentPage} />
+          <Route exact path="/" Component={FeelingPage} />
+          <Route exact path="/" Component={UnderstandPage} />
+          <Route exact path="/" Component={SupportPage} />
+          <Route exact path="/Comment" Component={CommentPage} />
         </Router>
       </div>
     );

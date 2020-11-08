@@ -2,10 +2,33 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App/App';
-import registerServiceWorker from './registerServiceWorker';
 
-import { createStore } from 'redux';
+import { combineReducers, createStore } from 'redux';
 import { Provider } from 'react-redux';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+const CommentReducer = (state = 'words', action) => {
+  if (action.type === 'SET_COMMENT_TYPE') {
+    return action.payload;
+  }
+
+  return state;
+};
+
+const FeelingReducer = () => {};
+
+const SupportReducer = () => {};
+
+const UnderstandReducer = () => {};
+
+const storeInstance = createStore(
+  combineReducers({
+    CommentReducer,
+  })
+);
+
+ReactDOM.render(
+  <Provider store={storeInstance}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+);
