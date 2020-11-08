@@ -5,6 +5,7 @@ class FeelingPage extends Component {
     return (
       <div>
         <h1>Feeling Page</h1>
+        <button>How're you feeling today?</button>
       </div>
     );
   }

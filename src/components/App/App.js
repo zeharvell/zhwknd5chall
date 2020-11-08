@@ -14,9 +14,9 @@ class App extends Component {
         <h1>Feedback Forum</h1>
         <Router>
           <Route exact path="/" Component={FeelingPage} />
-          <Route exact path="/" Component={UnderstandPage} />
-          <Route exact path="/" Component={SupportPage} />
-          <Route exact path="/Comment" Component={CommentPage} />
+          <Route exact path="/understand" Component={UnderstandPage} />
+          <Route exact path="/support" Component={SupportPage} />
+          <Route exact path="/comment" Component={CommentPage} />
         </Router>
       </div>
     );
